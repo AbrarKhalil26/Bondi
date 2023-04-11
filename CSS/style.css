@@ -1,0 +1,203 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.header a,
+.search + a{
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+}
+/* ---------------------Navbar---------------------- */
+.navbar{
+    background-color: var(--dark-color);
+}
+button{
+    color: white;
+    font-size: 1.5rem !important;
+    border: 1px solid white !important;
+}
+.nav-link:hover{
+    color: var(--green-color) !important;
+}
+.nav-link,
+.nav-link:visited{
+    color: white;
+}
+.active{
+    color: var(--green-color) !important;
+}
+.search{
+    color: white;
+    font-size: 1rem;
+    border-left: 2px solid var(--green-color);
+}
+/* ------------------------Header------------------- */
+.header{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 73px);
+}
+/* -----------------------Feature------------------ */
+.main-title{
+    position: relative;
+}
+.main-title::after{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 120px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--green-color);
+}
+.feature h3{
+    color: var(--yellow-color);
+}
+.feat{
+    height: 200px;
+}
+.feature .feat svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.feature .feat .number{
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.feature .feat .icon{
+    color: var(--green-color);
+    z-index: 3;
+}
+/* ---------------------Work--------------- */
+.work{
+    background-color: var(--section-color);
+}
+.work li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.work li:nth-child(1),
+.btn{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.btn:hover{
+    color: #ffc400;
+}
+.work li:not(li:first-child):hover{
+    color: var(--red-color);
+}
+.work .box{
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51 209 204 / 76%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    color: white;
+    font-size: 30px;
+    transform: translateX(calc(-100% - 5px));
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+.work .box:hover::before{
+    transform: translateX(0);
+}
+/* -------------------Stuff---------------- */
+.description{
+    max-width: 500px;
+}
+/* -------------------Team-------------------- */
+.team{
+    background-color: var(--section-color);
+}
+.team h2{
+    color: var(--yellow-color);
+}
+.team h3{
+    background-color: var(--green-color);
+}
+/* ------------------Project------------------ */
+.project{
+    background-color: var(--dark-color);
+}
+/* -----------------subscribe----------------- */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe input{
+    border: 0;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    outline: none;
+}
+.subscribe input::placeholder{
+    color: white;
+}
+.subscribe .btn{
+    background-color: var(--dark-color);
+}
+/* ---------------------Footer--------------- */
+.footer{
+    background-color: var(--dark-color);
+}
+.footer p{
+    color: #aaa;
+}
+.info p:nth-child(3) span{
+    color: #33d1cc;
+}
+.info p:nth-child(4) span{
+    color: #ffc400;
+}
+.footer li{
+    color: #aaa;
+    padding-bottom: 10px;
+}
+.footer h3{
+    font-size: 20px;
+}
+/* .footer svg{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+} */
+.footer .contact ul svg{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.footer li:nth-child(1) svg{
+    background-color: blue;
+}
+.footer li:nth-child(2) svg{
+    background-color: rgb(0, 170, 255);
+}
+.footer li:nth-child(3) svg{
+    background-color: rgb(57, 57, 247);
+}
+.footer li:nth-child(4) svg{
+    background-color: red;
+}
